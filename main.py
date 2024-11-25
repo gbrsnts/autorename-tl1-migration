@@ -34,11 +34,12 @@ if __name__ == '__main__':
         pon_destino = str(
             input("Qual PON de destino que deseja renomear? "))
     sleep(1.5)
-    # df = extrair(HOST_UNM, USERNAME, PASSWORD, HOST_ORIGEM, SLOT_ORIGEM, HOST_DESTINO, SLOT_DESTINO, pon_destino)
+    df = extrair(HOST_UNM, USERNAME, PASSWORD, HOST_ORIGEM,
+                 SLOT_ORIGEM, HOST_DESTINO, SLOT_DESTINO, pon_destino)
 
     nome_arquivo = f"./files/{HOST_DESTINO}_SLOT_{SLOT_DESTINO}"
     nome_arquivo += ".xlsx" if pon_destino == "0" else f"_PON_{pon_destino}.xlsx"
-    # df.to_excel(nome_arquivo, index=False)
+    df.to_excel(nome_arquivo, index=False)
 
     df = pd.read_excel(nome_arquivo)
     # Renomear os clientes com os dados já estraídos
