@@ -1,0 +1,12 @@
+[UNM]
+username = usuario
+password = senha
+host = 1.1.1.1
+
+[OLT_ORIGEM]
+host = 1.1.1.2
+slot = 1
+
+[OLT_DESTINO]
+host = 1.1.1.3
+slot = 2
